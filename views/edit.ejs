@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/stylesheets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+<body>
+    <div class="bg-zinc-900 min-h-screen w-full p-10 text-white">
+        <a href="/read" class="text-blue-600">Read Users</a>
+        <form action="/update/<%=user.id%>" method="post">
+            <h1 class="text-3xl tracking-tighter mt-10 mb-5">Edit Users</h1>
+            <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            class="px-5 border-2 rounded-md border-zinc-800 outline-none py-2 bg-transparent"
+            value="<%=user.name%>"
+            />
+            <input
+            type="text"
+            placeholder="Email"
+            name="email"
+            class="px-5 border-2 rounded-md border-zinc-800 outline-none py-2 bg-transparent"
+            value="<%=user.email%>"
+            />
+            <input
+            type="text"
+            placeholder="Image URL"
+            name="image_url"
+            class="px-5 border-2 rounded-md border-zinc-800 outline-none py-2 bg-transparent"
+            value="<%=user.image_url%>"
+            />
+            <input
+            type="submit"
+            value="Update User"
+            class="py-2 px-4 bg-yellow-500 rounded-md"
+            />
+        </form>
+    </div>
+</body>
+</html>
